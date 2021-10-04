@@ -1,6 +1,6 @@
 # Auto-Mower
 ## Summary
-This is an implementation of the auto-mower program running with java 15 and Spring Boot Web 2.5 framework.
+This is an implementation of the auto-mower program running with java 17 and Spring Boot Web 2.5 framework.
 The specification of this program can be find in the INSTRUCTION.md file.
 Once running, it exposes an endpoint at http://localhost:8080/api/mower/runFromInput
 The end of this document shows how to use it.
@@ -12,8 +12,15 @@ This implementation handles most communes input errors but:
   
 ## Test
 - Run the app:
+with maven
 ```
 mvn org.springframework.boot:spring-boot-maven-plugin:2.5.5:run
+```
+
+or with docker
+```
+docker build -t piegaym/auto-mower .
+docker run -p 8080:8080 piegaym/auto-mower
 ```
 - Test it:
 ```
